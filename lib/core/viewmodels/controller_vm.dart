@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:mon_task/core/models/controller_page_model.dart';
+import 'package:mon_task/core/core.dart';
+
 
 class ControllerViewModel extends ChangeNotifier {
   ControllerViewModel(this.ref);

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:mon_task/core/viewmodels/providers.dart';
+import 'package:mon_task/core/core.dart';
+
 
 class ControllerPage extends StatefulHookConsumerWidget {
   const ControllerPage({
