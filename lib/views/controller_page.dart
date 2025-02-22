@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mon_task/core/core.dart';
+import 'package:mon_task/views/widgets/widgets.dart';
 
 
 class ControllerPage extends StatefulHookConsumerWidget {
@@ -42,7 +43,7 @@ class _ControllerPageState extends ConsumerState<ControllerPage> {
           ),
           Align(
             alignment: Alignment.bottomCenter,
-            child: Container(),
+            child: ControllerBottomNav(),
           ),
         ],
       ),

@@ -5,15 +5,15 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static TextTheme get textTheme => TextTheme(
-    titleLarge: GoogleFonts.lato(fontSize: 32.sp),
-    titleMedium: GoogleFonts.lato(fontSize: 28.sp),
-    titleSmall: GoogleFonts.lato(fontSize: 18.sp),
-    bodyLarge: GoogleFonts.lato(fontSize: 16.sp),
-    bodyMedium: GoogleFonts.lato(fontSize: 14.sp),
-    bodySmall: GoogleFonts.lato(fontSize: 12.sp),
-    labelLarge: GoogleFonts.lato(fontSize: 14.sp),
-    labelMedium: GoogleFonts.lato(fontSize: 12.sp),
-    labelSmall: GoogleFonts.lato(fontSize: 10.sp),
+    titleLarge: GoogleFonts.nunitoSans(fontSize: 32.sp),
+    titleMedium: GoogleFonts.nunitoSans(fontSize: 28.sp),
+    titleSmall: GoogleFonts.nunitoSans(fontSize: 18.sp),
+    bodyLarge: GoogleFonts.nunitoSans(fontSize: 16.sp),
+    bodyMedium: GoogleFonts.nunitoSans(fontSize: 14.sp),
+    bodySmall: GoogleFonts.nunitoSans(fontSize: 12.sp),
+    labelLarge: GoogleFonts.nunitoSans(fontSize: 14.sp),
+    labelMedium: GoogleFonts.nunitoSans(fontSize: 12.sp),
+    labelSmall: GoogleFonts.nunitoSans(fontSize: 10.sp),
   );
 
   static const ColorScheme light = ColorScheme(
@@ -62,7 +62,7 @@ class AppTheme {
         visualDensity: FlexColorScheme.comfortablePlatformDensity,
         useMaterial3: true,
         swapLegacyOnMaterial3: true,
-        fontFamily: GoogleFonts.lato().fontFamily,
+        fontFamily: GoogleFonts.nunitoSans().fontFamily,
         textTheme: textTheme,
       );
 }
