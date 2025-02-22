@@ -143,8 +143,8 @@ class _HomeTopSectionState extends State<HomeTopSection>
                       child: AnimatedBuilder(
                         animation: locationContentAnimationController,
                         builder: (context, _) {
-                          return FadeTransition(
-                            opacity: locationContentAnimation,
+                          return Opacity(
+                            opacity: locationContentAnimation.value,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -168,13 +168,6 @@ class _HomeTopSectionState extends State<HomeTopSection>
                           );
                         },
                       ),
-
-                      // AnimatedOpacity(
-                      //   opacity: _animateText ? 1 : 0,
-                      //   curve: Curves.decelerate,
-                      //   duration: Duration(milliseconds: 500),
-                      //   child:
-                      // ),
                     );
                   },
                 ),
@@ -197,7 +190,7 @@ class _HomeTopSectionState extends State<HomeTopSection>
                         ),
                         child: ClipOval(
                           child: Image.network(
-                            'https://picsum.photos/200/300',
+                            'https://images.pexels.com/photos/3992656/pexels-photo-3992656.png',
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -205,12 +198,6 @@ class _HomeTopSectionState extends State<HomeTopSection>
                     );
                   },
                 ),
-                // AnimatedScale(
-                //   scale: _animateImage ? 1 : 0,
-                //   curve: Curves.decelerate,
-                //   duration: Duration(milliseconds: 500),
-                //   child:
-                // ),
               ],
             ),
             const SizedBox(height: 16),
@@ -219,8 +206,8 @@ class _HomeTopSectionState extends State<HomeTopSection>
               child: AnimatedBuilder(
                 animation: nameAnimation,
                 builder: (context, _) {
-                  return FadeTransition(
-                    opacity: nameAnimation,
+                  return Opacity(
+                    opacity: nameAnimation.value,
                     child: Text(
                       'Hi, Marina',
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
@@ -232,13 +219,6 @@ class _HomeTopSectionState extends State<HomeTopSection>
                   );
                 },
               ),
-
-              //  AnimatedOpacity(
-              //   duration: const Duration(milliseconds: 500),
-              //   opacity: _animateName ? 1 : 0,
-              //   curve: Curves.decelerate,
-              //   child:
-              // ),
             ),
             ClipRRect(
               child: Align(
@@ -259,13 +239,6 @@ class _HomeTopSectionState extends State<HomeTopSection>
                     );
                   },
                 ),
-
-                //  AnimatedSlide(
-                //   duration: const Duration(milliseconds: 500),
-                //   offset: _animateLine1 ? Offset.zero : const Offset(0, 1),
-                //   curve: Curves.decelerate,
-                //   child:
-                // ),
               ),
             ),
             SizedBox(height: 30),
@@ -280,6 +253,7 @@ class _HomeTopSectionState extends State<HomeTopSection>
                     shape: BoxShape.circle,
                   ),
                 ),
+                
                 Expanded(
                   child: OptionWidget(
                     count: 2212,

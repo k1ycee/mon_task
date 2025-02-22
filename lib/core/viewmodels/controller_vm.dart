@@ -34,6 +34,36 @@ class ControllerViewModel extends ChangeNotifier {
     ),
   ];
 
+
+
+
+  final List<SpaceListingModel> listings = [
+   SpaceListingModel (
+      address: 'Gladkova St., 25',
+      image: 'https://cdn.pixabay.com/photo/2023/01/10/20/56/nyc-7710506_1280.jpg',
+      mainAxis: 2,
+      crossAxis: 1
+    ),
+  SpaceListingModel  (
+      address: 'Gubina St., 11',
+      image: 'https://cdn.pixabay.com/photo/2014/07/31/21/41/apartment-406901_1280.jpg',
+      mainAxis: 1,
+      crossAxis: 2
+    ),
+  SpaceListingModel  (
+      address: 'Trefoleva St., 43',
+      image: 'https://cdn.pixabay.com/photo/2018/05/25/17/52/home-3429674_1280.jpg',
+      mainAxis: 1,
+      crossAxis: 1
+    ),
+   SpaceListingModel (
+      address: 'Sedova St., 22',
+      image: 'https://cdn.pixabay.com/photo/2017/02/24/12/22/apartment-2094702_1280.jpg',
+      mainAxis: 1,
+      crossAxis: 1
+    )
+  ];
+
   int _currentTab = 2;
   int get currentTab => _currentTab;
   set currentTab(int val) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mon_task/views/tabs/home/widget/space_listings.dart';
 import 'package:mon_task/views/tabs/home/widget/top_section.dart';
 
 class Hometab extends StatefulWidget {
@@ -29,7 +30,7 @@ class _HometabState extends State<Hometab> with TickerProviderStateMixin {
             ),
           ];
         },
-        body: Container(),
+        body: SpaceListings(),
       ),
     );
   }
