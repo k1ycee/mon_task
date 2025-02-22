@@ -59,7 +59,7 @@ class _HomeTopSectionState extends State<HomeTopSection>
 
     nameAnimationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 900),
+      duration: Duration(milliseconds: 1000),
     );
 
     nameAnimation = Tween<double>(begin: 0, end: 1).animate(
@@ -83,7 +83,7 @@ class _HomeTopSectionState extends State<HomeTopSection>
 
     headLineAnimationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 1100),
+      duration: Duration(milliseconds: 1200),
     );
 
     headLineAnimation = Tween<Offset>(

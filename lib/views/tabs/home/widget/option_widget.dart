@@ -41,7 +41,7 @@ class _OptionWidgetState extends State<OptionWidget>
       end: widget.count,
     ).animate(_animationController);
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
-      await Future.delayed(const Duration(milliseconds: 1500));
+      await Future.delayed(const Duration(milliseconds: 3500));
       if (mounted) {
         setState(() {
           _animateSize = true;
