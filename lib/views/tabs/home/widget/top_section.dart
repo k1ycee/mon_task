@@ -27,8 +27,6 @@ class _HomeTopSectionState extends State<HomeTopSection>
   late AnimationController headLineAnimationController;
   late Animation<Offset> headLineAnimation;
 
-
-
   @override
   void initState() {
     super.initState();
@@ -53,7 +51,7 @@ class _HomeTopSectionState extends State<HomeTopSection>
     locationContentAnimation = Tween<double>(begin: 0, end: 1).animate(
       CurvedAnimation(
         parent: locationContentAnimationController,
-        curve: Curves.decelerate,
+        curve: Curves.easeIn,
       ),
     );
 
@@ -63,10 +61,7 @@ class _HomeTopSectionState extends State<HomeTopSection>
     );
 
     nameAnimation = Tween<double>(begin: 0, end: 1).animate(
-      CurvedAnimation(
-        parent: nameAnimationController,
-        curve: Curves.decelerate,
-      ),
+      CurvedAnimation(parent: nameAnimationController, curve: Curves.easeIn),
     );
 
     avatarAnimationController = AnimationController(
@@ -75,10 +70,7 @@ class _HomeTopSectionState extends State<HomeTopSection>
     );
 
     avatarAnimation = Tween<double>(begin: 0, end: 1).animate(
-      CurvedAnimation(
-        parent: avatarAnimationController,
-        curve: Curves.decelerate,
-      ),
+      CurvedAnimation(parent: avatarAnimationController, curve: Curves.easeIn),
     );
 
     headLineAnimationController = AnimationController(
@@ -97,10 +89,11 @@ class _HomeTopSectionState extends State<HomeTopSection>
     );
 
     locationAnimationController.forward();
-
+    avatarAnimationController.forward();
     locationAnimationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         locationAnimationController.dispose();
+        avatarAnimationController.dispose();
         locationContentAnimationController.forward();
       }
     });
@@ -108,21 +101,14 @@ class _HomeTopSectionState extends State<HomeTopSection>
     locationContentAnimationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         locationContentAnimationController.dispose();
-        avatarAnimationController.forward();
-      }
-    });
-
-    avatarAnimationController.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        avatarAnimationController.dispose();
         nameAnimationController.forward();
       }
     });
 
-        nameAnimationController.addStatusListener((status) {
+    nameAnimationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-         nameAnimationController.dispose();
-       headLineAnimationController.forward();
+        nameAnimationController.dispose();
+        headLineAnimationController.forward();
       }
     });
   }
