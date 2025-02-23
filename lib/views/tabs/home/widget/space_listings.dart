@@ -36,7 +36,7 @@ class _SpaceListingsState extends ConsumerState<SpaceListings>
 
   @override
   Widget build(BuildContext context) {
-    final listing = ref.watch(controllerVM.select((value) => value.listings));
+    final listing = ref.watch(homeVM.select((value) => value.listings));
     return AnimatedBuilder(animation: _animation, builder: (context, _){
       return SlideTransition(
         position: _animation,

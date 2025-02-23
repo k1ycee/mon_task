@@ -66,21 +66,21 @@ class _AnimatedButtonState extends State<AnimatedButton>
       await Future.delayed(const Duration(milliseconds: 4000));
       if (mounted) {
         _buttonAnimationController.forward();
-         _sliderAnimationController.forward();
+        _sliderAnimationController.forward();
       }
       _buttonAnimationController.addStatusListener((status) {
         if (status == AnimationStatus.completed) {
-          _buttonAnimationController.dispose();
           _addressAnimationController.forward();
         }
       });
-
     });
   }
 
   @override
   void dispose() {
     _addressAnimationController.dispose();
+    _buttonAnimationController.dispose();
+    _sliderAnimationController.dispose();
     super.dispose();
   }
 
@@ -126,7 +126,11 @@ class _AnimatedButtonState extends State<AnimatedButton>
                             animation: _sliderAnimation,
                             builder: (context, _) {
                               return Transform.translate(
-                                offset: Offset( (constraints.maxWidth - 40) * _sliderAnimation.value , 0),
+                                offset: Offset(
+                                  (constraints.maxWidth - 40) *
+                                      _sliderAnimation.value,
+                                  0,
+                                ),
                                 child: Container(
                                   padding: const EdgeInsets.only(
                                     right: 1,

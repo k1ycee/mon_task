@@ -92,22 +92,18 @@ class _HomeTopSectionState extends State<HomeTopSection>
     avatarAnimationController.forward();
     locationAnimationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        locationAnimationController.dispose();
-        avatarAnimationController.dispose();
         locationContentAnimationController.forward();
       }
     });
 
     locationContentAnimationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        locationContentAnimationController.dispose();
         nameAnimationController.forward();
       }
     });
 
     nameAnimationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        nameAnimationController.dispose();
         headLineAnimationController.forward();
       }
     });
@@ -116,6 +112,10 @@ class _HomeTopSectionState extends State<HomeTopSection>
   @override
   void dispose() {
     headLineAnimationController.dispose();
+    nameAnimationController.dispose();
+    locationContentAnimationController.dispose();
+    locationAnimationController.dispose();
+    avatarAnimationController.dispose();
     super.dispose();
   }
 
@@ -253,7 +253,7 @@ class _HomeTopSectionState extends State<HomeTopSection>
                     shape: BoxShape.circle,
                   ),
                 ),
-                
+
                 Expanded(
                   child: OptionWidget(
                     count: 2212,

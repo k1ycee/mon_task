@@ -6,7 +6,7 @@ import 'package:mon_task/views/tabs/fave_tab.dart';
 import 'package:mon_task/views/tabs/home/home_tab.dart';
 import 'package:mon_task/views/tabs/message_tab.dart';
 import 'package:mon_task/views/tabs/profile_tab.dart';
-import 'package:mon_task/views/tabs/search_tab.dart';
+import 'package:mon_task/views/tabs/search/search_tab.dart';
 
 
 class ControllerViewModel extends ChangeNotifier {
