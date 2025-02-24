@@ -10,7 +10,7 @@ class MarkerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      width: 120,
+      width: 95,
       decoration: const BoxDecoration(
         color: Color(0xfffc9f12),
         borderRadius: BorderRadius.only(
@@ -20,7 +20,7 @@ class MarkerWidget extends StatelessWidget {
         ),
       ),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
