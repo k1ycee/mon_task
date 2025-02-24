@@ -36,34 +36,40 @@ class _SearchTabState extends ConsumerState<SearchTab>
   Future<void> _initializeMarkers() async {
     final markers = {
       Marker(
-        markerId: MarkerId("okhta_residence_1"),
+        markerId: MarkerId("10,3 mn P"),
         position: LatLng(59.9508, 30.4125),
         icon: await const MarkerWidget(title: "10,3 mn P").toBitmapDescriptor(),
+        rotation: 180,
       ),
       Marker(
-        markerId: MarkerId("okhta_residence_2"),
+        markerId: MarkerId("11 mn P"),
         position: LatLng(59.9514, 30.4142),
         icon: await const MarkerWidget(title: "11 mn P").toBitmapDescriptor(),
+        // rotation: 180,
       ),
       Marker(
-        markerId: MarkerId("okhta_riverside_apartments"),
+        markerId: MarkerId("7,8 mn P"),
         position: LatLng(59.9520, 30.4158),
         icon: await const MarkerWidget(title: "7,8 mn P").toBitmapDescriptor(),
+        // rotation: 180,
       ),
       Marker(
-        markerId: MarkerId("novaya_okhta_complex"),
+        markerId: MarkerId("8,5 mn P"),
         position: LatLng(59.9532, 30.4175),
         icon: await const MarkerWidget(title: "8,5 mn P").toBitmapDescriptor(),
+        // rotation: 180,
       ),
       Marker(
-        markerId: MarkerId("malaya_okhta_residential"),
+        markerId: MarkerId("13,3 mn P"),
         position: LatLng(59.9540, 30.4191),
         icon: await const MarkerWidget(title: "13,3 mn P").toBitmapDescriptor(),
+        // rotation: 180,
       ),
       Marker(
-        markerId: MarkerId("glorax_okhta_living"),
+        markerId: MarkerId("6,95 mn P"),
         position: LatLng(59.9548, 30.4205),
         icon: await const MarkerWidget(title: "6,95 mn P").toBitmapDescriptor(),
+        // rotation: 180,
       ),
     };
 
@@ -252,7 +258,7 @@ class _SearchTabState extends ConsumerState<SearchTab>
               },
               child: Container(
                 height: 200,
-                width: 200,
+                width: 220,
                 decoration: BoxDecoration(
                   color: const Color(0xffffffff),
                   borderRadius: BorderRadius.circular(24),

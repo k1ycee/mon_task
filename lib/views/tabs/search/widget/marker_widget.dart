@@ -26,6 +26,7 @@ class MarkerWidget extends StatelessWidget {
           children: [
             Text(
               title,
+              // textDirection: Tr,
               style: Theme.of(
                 context,
               ).textTheme.bodyMedium!.copyWith(color: AppTheme.light.onPrimary),

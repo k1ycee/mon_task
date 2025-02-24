@@ -36,6 +36,12 @@ class _SpaceListingsState extends ConsumerState<SpaceListings>
   }
 
   @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final listing = ref.watch(homeVM.select((value) => value.listings));
     return AnimatedBuilder(animation: _animation, builder: (context, _){

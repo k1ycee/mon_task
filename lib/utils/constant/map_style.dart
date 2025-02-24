@@ -1,6 +1,4 @@
-const String mapStyle = """
-
-[
+const String mapStyle = """[
   {
     "elementType": "geometry",
     "stylers": [
@@ -74,6 +72,4 @@ const String mapStyle = """
       { "color": "#3d3d3d" }
     ]
   }
-]
-
-""";
+]""";

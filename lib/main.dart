@@ -12,6 +12,8 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(systemNavigationBarColor: Colors.transparent),
   );
+
+  
   
   runApp(ProviderScope(child: const MyApp()));
 }

@@ -60,6 +60,7 @@ class _OptionWidgetState extends State<OptionWidget>
 
   @override
   void dispose() {
+    _containerAnimationController.dispose();
     _countAnimationController.dispose();
     super.dispose();
   }
