@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mon_task/core/viewmodels/viewmodels.dart';
-import 'package:mon_task/views/tabs/home/widget/listing_widget.dart';
+import 'package:mon_task/views/tabs/home/widget/widget.dart';
+
 
 class SpaceListings extends StatefulHookConsumerWidget {
   const SpaceListings({super.key});

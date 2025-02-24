@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:mon_task/core/theme/theme.dart';
-import 'package:mon_task/views/tabs/home/widget/option_widget.dart';
+import 'package:mon_task/core/core.dart';
+import 'package:mon_task/views/tabs/home/widget/widget.dart';
+
 
 class HomeTopSection extends StatefulWidget {
   const HomeTopSection({super.key});

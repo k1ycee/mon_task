@@ -4,8 +4,8 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:mon_task/core/viewmodels/providers.dart';
-import 'package:mon_task/utils/constant/map_style.dart';
-import 'package:mon_task/views/tabs/search/widget/marker_widget.dart';
+import 'package:mon_task/utils/utils.dart';
+import 'package:mon_task/views/tabs/search/widget/widget.dart';
 import 'package:widget_to_marker/widget_to_marker.dart';
 
 class SearchTab extends StatefulHookConsumerWidget {
