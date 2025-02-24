@@ -39,7 +39,7 @@ class _SearchTabState extends ConsumerState<SearchTab>
         markerId: MarkerId("10,3 mn P"),
         position: LatLng(59.9508, 30.4125),
         icon: await const MarkerWidget(title: "10,3 mn P").toBitmapDescriptor(),
-        rotation: 180,
+        // rotation: 180,
       ),
       Marker(
         markerId: MarkerId("11 mn P"),
